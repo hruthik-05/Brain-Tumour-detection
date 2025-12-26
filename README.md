@@ -66,14 +66,6 @@ This project focuses on demonstrating the complete workflow from model training 
 
 ---
 
-## GitHub Repository
-
-You can view the complete project and source code here:
-
-[Add your GitHub repository link here]
-
----
-
 ## Future Improvements
 
 - Deploy the model using Flask or FastAPI
