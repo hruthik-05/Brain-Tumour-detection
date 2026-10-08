@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Tumor Detection</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+
+        body {
+            font-family: 'Baloo 2', cursive;
+            margin: 0;
+            background: linear-gradient(135deg, #d0eaff, #a8cfff);
+            color: #333;
+        }
+        .container {
+            max-width: 650px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 3px solid #e6f0ff;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #007bff;
+            text-shadow: 2px 2px #cce5ff;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: linear-gradient(145deg, #f0f8ff, #d6e9ff);
+            padding: 25px;
+            border-radius: 20px;
+            border: 2px solid #b3d1ff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        h3 {
+            margin-top: 0;
+            color: #0056b3;
+            font-size: 1.4em;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(90deg, #1e90ff, #007bff);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(90deg, #1c86ee, #0069d9);
+        }
+        input[type="file"] {
+            margin: 15px auto;
+            display: block;
+            background: #f0f8ff;
+            padding: 8px;
+            border-radius: 15px;
+            border: 1px solid #99c2ff;
+            cursor: pointer;
+        }
+        #predictionResult {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #004085;
+            font-size: 1.2em;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Brain Tumor Detection ✨</h1>
+        <p class="subtitle">A magical AI to guide your diagnosis</p>
+
+        <!-- Prediction Only -->
+        <div class="card">
+            <h3>Upload MRI Image for Prediction</h3>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required />
+                <button type="submit" class="btn">🔍 Predict</button>
+            </form>
+            <p id="predictionResult"></p>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
